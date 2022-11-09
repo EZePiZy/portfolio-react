@@ -1,6 +1,7 @@
 import { Box, Button, Flex, Spacer, Text } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
+import Apply from '../components/form';
 
 export default function Navbar() {
   const Bracket = styled.span`
@@ -17,7 +18,7 @@ export default function Navbar() {
           color="displayColor"
           fontWeight="bold"
           fontSize="32px">
-          <Bracket>&#123;</Bracket>ER<Bracket>&#125;</Bracket>
+          <Bracket>&#123;</Bracket>V.K.<Bracket>&#125;</Bracket>
         </Text>
       </Box>
       <Spacer />
@@ -27,9 +28,9 @@ export default function Navbar() {
             Home
           </Button>
         </NextLink>
-        <NextLink href="https://google.com" passHref>
+        <NextLink href="/apply" passHref>
           <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px" color="textSecondary">
-            CV
+            Apply Now!
           </Button>
         </NextLink>
       </Box>

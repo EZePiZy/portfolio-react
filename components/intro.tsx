@@ -1,5 +1,7 @@
 import { Stack, Box, SlideFade, Text, Heading, Link, Button } from '@chakra-ui/react'
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa'
+import TextLoop from './text-loop'
+
 
 export default function Intro() {
   return (
@@ -15,7 +17,7 @@ export default function Intro() {
             fontWeight="medium"
             position="relative"
           >
-            Hey there, I'm-
+            Welcome to-
           </Text>
         </Box>
         <Heading
@@ -25,28 +27,36 @@ export default function Intro() {
           letterSpacing={{ sm: '-1.2px', md: '-1.8px' }}
           position="relative"
         >
-          <Box color="displayColor" as="span">Ezra</Box>
+          <Box color="displayColor" as="span">V.K. Capital</Box>
           .
         </Heading>
       </SlideFade>
 
       <SlideFade
         in={true}
-        transition={{ enter: { duration: 0.4, delay: 0.9 } }}
+        transition={{ enter: { duration: 0.4, delay: 0.8 } }}
       >
-        <Box w={['85vw', '40vw']}>
-        <Text fontSize="display3" color="textSecondary">
-          Some description about yourself. Lorem ipsum and all that good stuff. Some more waffle to fill up the space.
-        </Text>
-        </Box>
-      </SlideFade>
+        <Heading
+          color="textSecondary"
+          fontSize="display2"
+          fontWeight="medium"
+          whiteSpace="pre-wrap"
+          letterSpacing="-1.6px"
+          w={['85vw', '40vw']}
+        >
+    
+          {' '}
+          <TextLoop texts={["Connect.", "Learn.", "Invest."]} interval={3000} />
 
+
+        </Heading>
+      </SlideFade>
       <SlideFade
         in={true}
         transition={{ enter: { duration: 0.4, delay: 1.0 } }}
       >
         <Stack isInline spacing={4}>
-          <Link href="https://github.com/" isExternal>
+          {/* <Link href="https://github.com/" isExternal>
             <Button
               leftIcon={<FaGithub color="#5F99FF" />}
               position="static"
@@ -56,8 +66,8 @@ export default function Intro() {
             >
               Github
             </Button>
-          </Link>
-          <Link href="https://linkedin.com/" isExternal>
+          </Link> */}
+          <Link href="https://www.linkedin.com/company/vkcapital/" isExternal>
             <Button
               leftIcon={<FaLinkedin color="#5F99FF" />}
               position="static"
@@ -68,7 +78,7 @@ export default function Intro() {
               LinkedIn
             </Button>
           </Link>
-          <Link href="mailto:gdsc@imperial.ac.uk" isExternal>
+          <Link href="mailto:er121@ic.ac.uk" isExternal>
             <Button
               leftIcon={<FaEnvelope fill="#5F99FF" />}
               transition="0.3s"

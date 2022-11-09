@@ -1,5 +1,6 @@
 import React from 'react'
 import { chakra, Divider, Flex, Stack, Text, VStack } from '@chakra-ui/react'
+import Emoji from './emoji'
 import Navbar from './navbar'
 
 
@@ -18,7 +19,7 @@ export default function Container({children}: Props) {
       </Flex>
       <Stack alignItems="center" mt={10} mb={5}>
         <Text textAlign="center" fontSize={["0.5em", "sm"]} color="displayColor">
-          Designed and Developed by Ezra Reich.
+          Designed and Developed by Ezra Reich <Emoji symbol="❤" label='heart' />.
           <br />
           Built with{' '}
           <chakra.span fontWeight="semibold" color="button1">
